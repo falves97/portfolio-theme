@@ -1,0 +1,19 @@
+{
+  "name": "falves97/portfolio",
+  "description": "Meu portfólio profissional",
+  "minimum-stability": "stable",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Fernando Braga Alves",
+      "email": "f.braga.alves1@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Source": "/"
+    }
+  },
+  "require": {
+  }
+}

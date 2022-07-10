@@ -1,0 +1,124 @@
+@use "sass:math";
+@import "../utils";
+@import "../config";
+
+@mixin bars($width, $height) {
+  background-color: $emphasis-color;
+  border-radius: $height;
+  height: $height;
+  transition: all .3s ease-in-out;
+  width: $width;
+}
+
+.fbalves-header-container {
+  margin-bottom: 10px;
+  width: 100%;
+
+  .fbalves-logo-container {
+    background-color: $third-color;
+    height: 70px;
+    padding: 10px 0;
+    position: relative;
+
+    .custom-logo-link {
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      .custom-logo {
+        display: block;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .fbalves-btn-menu {
+      align-content: center;
+      color: $emphasis-color;
+      display: flex;
+      flex-wrap: wrap;
+      height: 50px;
+      justify-content: center;
+      right: 2%;
+      position: absolute;
+      width: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .fbalves-btn-menu__bars {
+        @include bars(30px, 4px);
+
+        &::before, &::after {
+          content: "";
+          position: absolute;
+        }
+
+        &::before {
+          @include bars(40px, 4px);
+          transform: translateY(-15px);
+        }
+
+        &::after {
+          @include bars(20px, 4px);
+          transform: translateY(15px);
+        }
+      }
+    }
+
+    .fbalves-btn-open {
+      .fbalves-btn-menu__bars {
+        background: transparent;
+        transform: translateX(-30px);
+
+        &::before, &::after {
+          width: 30px;
+        }
+
+        &::before {
+          transform: rotate(45deg) translate(math.cos(45deg) * 30px, -(math.sin(45deg) * 30px));
+        }
+
+        &::after {
+          transform: rotate(-45deg) translate(math.cos(45deg) * 30px, math.sin(45deg) * 30px);
+        }
+      }
+    }
+  }
+
+  .menu-menu-principal-container {
+    background-color: $third-color;
+    height: 0;
+    overflow-y: hidden;
+    transition: all .5s ease-in-out;
+
+    .menu {
+      height: auto;
+      opacity: 0;
+      transition: all .5s ease-in-out;
+
+      li {
+        display: block;
+
+        a {
+          display: block;
+          color: $emphasis-color;
+          font-size: 1.3rem;
+          padding: 10px 0;
+          text-align: center;
+          text-decoration: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .fbalves-show-menu {
+    height: 163px;
+
+    .menu {
+      opacity: 100%;
+    }
+  }
+}
+
