@@ -1,0 +1,13 @@
+@mixin banner {
+  display: flex;
+  flex-direction: column;
+}
+
+.fbalves-banner-container__img-container {
+  @include banner;
+
+  .fbalves-banner-container__img {
+    height: auto;
+    width: 100%;
+  }
+}

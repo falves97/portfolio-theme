@@ -1,9 +1,8 @@
 @use "sass:math";
-@import "../utils";
-@import "../config";
+@import "config";
 
 @mixin bars($width, $height) {
-  background-color: $emphasis-color;
+  background-color: var(--fourth-color);
   border-radius: $height;
   height: $height;
   transition: all .3s ease-in-out;
@@ -11,13 +10,12 @@
 }
 
 .fbalves-header-container {
-  margin-bottom: 10px;
   width: 100%;
 
   .fbalves-logo-container {
-    background-color: $third-color;
-    height: 70px;
-    padding: 10px 0;
+    background-color: var(--third-color);
+    height: 3rem;
+    padding: .4rem 0;
     position: relative;
 
     .custom-logo-link {
@@ -28,26 +26,25 @@
 
       .custom-logo {
         display: block;
-        width: 50px;
-        height: 50px;
+        width: 2.4rem;
+        height: 2.4rem;
       }
     }
 
     .fbalves-btn-menu {
       align-content: center;
-      color: $emphasis-color;
+      color: var(--fourth-color);
       display: flex;
       flex-wrap: wrap;
-      height: 50px;
-      justify-content: center;
+      height: 2rem;
       right: 2%;
       position: absolute;
-      width: 50px;
+      width: 2rem;
       top: 50%;
       transform: translateY(-50%);
 
       .fbalves-btn-menu__bars {
-        @include bars(30px, 4px);
+        @include bars(1.6rem, .2rem);
 
         &::before, &::after {
           content: "";
@@ -55,13 +52,13 @@
         }
 
         &::before {
-          @include bars(40px, 4px);
-          transform: translateY(-15px);
+          @include bars(2rem, .2rem);
+          transform: translateY(-.8rem);
         }
 
         &::after {
-          @include bars(20px, 4px);
-          transform: translateY(15px);
+          @include bars(1.3rem, .2rem);
+          transform: translateY(.8rem);
         }
       }
     }
@@ -69,25 +66,25 @@
     .fbalves-btn-open {
       .fbalves-btn-menu__bars {
         background: transparent;
-        transform: translateX(-30px);
+        transform: translateX(-1.6rem);
 
         &::before, &::after {
-          width: 30px;
+          width: 1.6rem;
         }
 
         &::before {
-          transform: rotate(45deg) translate(math.cos(45deg) * 30px, -(math.sin(45deg) * 30px));
+          transform: rotate(45deg) translate(math.cos(45deg) * 1.6rem, -(math.sin(45deg) * 1.6rem));
         }
 
         &::after {
-          transform: rotate(-45deg) translate(math.cos(45deg) * 30px, math.sin(45deg) * 30px);
+          transform: rotate(-45deg) translate(math.cos(45deg) * 1.6rem, math.sin(45deg) * 1.6rem);
         }
       }
     }
   }
 
   .menu-menu-principal-container {
-    background-color: $third-color;
+    background-color: var(--third-color);
     height: 0;
     overflow-y: hidden;
     transition: all .5s ease-in-out;
@@ -102,7 +99,7 @@
 
         a {
           display: block;
-          color: $emphasis-color;
+          color: var(--fourth-color);
           font-size: 1.3rem;
           padding: 10px 0;
           text-align: center;
@@ -114,11 +111,10 @@
   }
 
   .fbalves-show-menu {
-    height: 163px;
+    height: calc(100vh - 3.8rem);
 
     .menu {
       opacity: 100%;
     }
   }
 }
-

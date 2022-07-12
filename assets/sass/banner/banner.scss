@@ -1,0 +1,7 @@
+@import "banner-img";
+@import "banner-desc";
+
+.fbalves-banner-container {
+  @include banner;
+  padding: .7rem;
+}

@@ -1,0 +1,22 @@
+@use "banner-img";
+
+.fbalves-banner-container__desc-area {
+  @include banner;
+  margin-top: 2rem;
+  text-align: center;
+
+  h2, h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  a {
+    margin: auto;
+    width: 10rem;
+  }
+}

@@ -10,10 +10,9 @@ export class Menu {
     public displayMenu(): void {
         if (this.menuButtom != null) {
             this.menuButtom.addEventListener("click", event => {
-                if (this.navMenu != null) {
-                    this.navMenu.classList.toggle("fbalves-show-menu");
-                    this.menuButtom?.classList.toggle("fbalves-btn-open");
-                }
+
+                this.navMenu?.classList.toggle("fbalves-show-menu");
+                this.menuButtom?.classList.toggle("fbalves-btn-open");
             });
         }
     }

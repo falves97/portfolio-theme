@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
-    <h1>Hola, Mundo!</h1>
-
+<main class="fbalves-main">
+    <?php get_template_part('template-parts/page/content', 'banner'); ?>
+</main>
 <?php get_footer(); ?>

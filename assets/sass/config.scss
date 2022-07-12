@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import "button";
+
+/* Paleta de cores */
+:root {
+  --primary-color: #1363DF;
+  --second-color: #47B5FF;
+  --third-color: #DFF6FF;
+  --fourth-color: #06283D;
+}
 
 /* Fonte padrão */
 body {
   font-family: 'Ubuntu', sans-serif;
 }
-
-/* Paleta de cores */
-
-$primary-color: #1363DF;
-$second-color: #47B5FF;
-$third-color: #DFF6FF;
-$emphasis-color: #06283D;
+ .fbalves-main {
+   margin: auto;
+   max-width: 1200px;
+ }
