@@ -4,13 +4,14 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-function fbalves_projects_post_type()
+function fbalves_project_post_type()
 {
     register_post_type('fbalves_project',
         array(
             'labels' => array(
                 'name' => 'Projetos',
-                'edit_item' => 'Editar Projeto'
+                'edit_item' => 'Editar Projeto',
+                'add_new_item' => 'Adicionar novo projeto'
             ),
             'menu_icon' => 'dashicons-portfolio',
             'menu_position' => 6,
@@ -22,7 +23,7 @@ function fbalves_projects_post_type()
     );
 }
 
-add_action('init', 'fbalves_projects_post_type');
+add_action('init', 'fbalves_project_post_type');
 
 /**
  * Add meta_box para descrição do projeto

@@ -10,7 +10,13 @@ if (!defined('ABSPATH')) {
 function fbalves_portfolio_theme_add_features()
 {
     add_theme_support('custom-logo');
-    add_theme_support('post-thumbnails', array('post', 'fbalves_project'));
+    add_theme_support('post-thumbnails',
+        array(
+            'post',
+            'fbalves_project',
+            'fbalves_social'
+        )
+    );
 }
 
 add_action("after_setup_theme", "fbalves_portfolio_theme_add_features");

@@ -6,4 +6,6 @@ if (!defined('ABSPATH')) {
 require_once get_template_directory() . '/inc/banner.php';
 require_once get_template_directory() . '/inc/theme-support.php';
 require_once get_template_directory() . '/inc/assets.php';
-require_once get_template_directory() . '/inc/projects-post-type.php';
+require_once get_template_directory() . '/inc/project-post-type.php';
+require_once get_template_directory() . '/inc/social-post-type.php';
+require_once get_template_directory() . '/inc/link-meta-box.php';
