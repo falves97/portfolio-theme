@@ -5,7 +5,7 @@
   },
   "scripts": {
     "watch": "concurrently \"npm run watch-ts\" \"npm run watch-sass\"",
-    "watch-sass" : "sass --watch assets/sass:assets/dist/ ",
+    "watch-sass": "sass --watch assets/sass:assets/dist/ ",
     "compile-ts": "tsc",
     "watch-ts": "tsc -w"
   },
