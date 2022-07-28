@@ -9,5 +9,8 @@
   },
   "include": [
     "assets/typescript/**/*"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
